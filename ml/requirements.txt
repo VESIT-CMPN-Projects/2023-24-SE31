@@ -1,0 +1,7 @@
+pandas
+numpy
+scikit-learn
+seaborn
+tensorflow==2.15.0
+ipykernel # for vscode
+nbconvert # for convenience

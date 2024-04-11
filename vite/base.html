@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/base.scss">
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  <!-- CSS load hack -->
+  <script>;</script>
+  <div class="form login">
+    <div class="form-content">
+      <label for="phone-number">Phone number</label>
+      <input type="number" name="phone-number" id="phone-number" required />
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required />
+      <button>Login</button>
+      <div class="wrong">Something went wrong on your end...</div>
+    </div>
+  </div>
+  <div class="form signup">
+    <div class="form-content">
+      <label for="phone-number">Phone number</label>
+      <input type="number" name="phone-number" id="phone-number" required />
+      <label for="district-locality">District/Locality</label>
+      <select id="district" required></select>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required />
+      <button>Sign Up</button>
+      <div class="wrong">Something went wrong on your end...</div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="left">Kisan:Sevak</div>
+    <div class="right if-logged">
+      <span>Home</span>
+      <span>About Us</span>
+      <span class="logout">Logout</span>
+    </div>
+    <div class="right else-logged">
+      <span class="login-popper">Login</span>
+      <span class="signup-popper">Sign up</span>
+    </div>
+  </div>
+  <div class="nav-pushup"></div>
+  <div class="sidebar">
+    <span>District Information</span>
+    <span onclick="window.location.pathname='/ml/recommend'">Recommend Crop</span>
+    <span onclick="window.location.pathname='/ml/yield'">Predict Yield</span>
+    <span onclick="window.location.pathname='/ml/market'">Know Your Market</span>
+    <!-- <span>Contact Us</span> -->
+  </div>
+  <main>
+    {% block body %}{% endblock %}
+  </main>
+  <footer>
+    Shreerang Vaidya &dot; Jatin Navani &dot;
+    Samarth Nilkanth &dot; Anjali Thakrani
+  </footer>
+  <script type="module" src="./src/base.js"></script>
+</body>
+
+</html>

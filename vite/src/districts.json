@@ -1,0 +1,254 @@
+{
+  "Ahmednagar": {
+    "rainfall": 675,
+    "temperature": 27.5,
+    "N-ratio": 0,
+    "P-ratio": 1,
+    "K-ratio": 2
+  },
+  "Akola": {
+    "rainfall": 725,
+    "temperature": 28,
+    "N-ratio": 1,
+    "P-ratio": 1.5,
+    "K-ratio": 1
+  },
+  "Amravati": {
+    "rainfall": 800,
+    "temperature": 28,
+    "N-ratio": 2,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Aurangabad": {
+    "rainfall": 650,
+    "temperature": 29,
+    "N-ratio": 1,
+    "P-ratio": 1.5,
+    "K-ratio": 1
+  },
+  "Beed": {
+    "rainfall": 575,
+    "temperature": 28.5,
+    "N-ratio": 0,
+    "P-ratio": 1,
+    "K-ratio": 2
+  },
+  "Bhandara": {
+    "rainfall": 1100,
+    "temperature": 28,
+    "N-ratio": 1,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Buldhana": {
+    "rainfall": 750,
+    "temperature": 28.5,
+    "N-ratio": 1.5,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Chandrapur": {
+    "rainfall": 1400,
+    "temperature": 27.5,
+    "N-ratio": 1,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Dhule": {
+    "rainfall": 625,
+    "temperature": 26.5,
+    "N-ratio": 0,
+    "P-ratio": 1,
+    "K-ratio": 2
+  },
+  "Gadchiroli": {
+    "rainfall": 1500,
+    "temperature": 27,
+    "N-ratio": 1,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Gondia": {
+    "rainfall": 1000,
+    "temperature": 27.5,
+    "N-ratio": 1,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Hingoli": {
+    "rainfall": 700,
+    "temperature": 29,
+    "N-ratio": 1.5,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Jalgaon": {
+    "rainfall": 600,
+    "temperature": 28,
+    "N-ratio": 1,
+    "P-ratio": 1.5,
+    "K-ratio": 1
+  },
+  "Jalna": {
+    "rainfall": 625,
+    "temperature": 28.5,
+    "N-ratio": 1,
+    "P-ratio": 1.5,
+    "K-ratio": 1
+  },
+  "Kolhapur": {
+    "rainfall": 1200,
+    "temperature": 27.5,
+    "N-ratio": 2,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Latur": {
+    "rainfall": 600,
+    "temperature": 29,
+    "N-ratio": 1,
+    "P-ratio": 2,
+    "K-ratio": 1
+  },
+  "Mumbai city": {
+    "rainfall": 2500,
+    "temperature": 27,
+    "N-ratio": 1,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Mumbai suburban": {
+    "rainfall": 2300,
+    "temperature": 27,
+    "N-ratio": 1,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Nagpur": {
+    "rainfall": 1150,
+    "temperature": 28,
+    "N-ratio": 1,
+    "P-ratio": 1.5,
+    "K-ratio": 1
+  },
+  "Nandurbar": {
+    "rainfall": 600,
+    "temperature": 26.5,
+    "N-ratio": 1,
+    "P-ratio": 1.5,
+    "K-ratio": 1
+  },
+  "Nanded": {
+    "rainfall": 750,
+    "temperature": 29,
+    "N-ratio": 1.5,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Nashik": {
+    "rainfall": 650,
+    "temperature": 27,
+    "N-ratio": 1,
+    "P-ratio": 1.5,
+    "K-ratio": 1
+  },
+  "Osmanabad": {
+    "rainfall": 650,
+    "temperature": 29,
+    "N-ratio": 1,
+    "P-ratio": 2,
+    "K-ratio": 1
+  },
+  "Palghar": {
+    "rainfall": 2500,
+    "temperature": 27.5,
+    "N-ratio": 1,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Parbhani": {
+    "rainfall": 725,
+    "temperature": 29,
+    "N-ratio": 1.5,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Pune": {
+    "rainfall": 575,
+    "temperature": 27.5,
+    "N-ratio": 1.5,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Raigad": {
+    "rainfall": 2500,
+    "temperature": 26.5,
+    "N-ratio": 1,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Ratnagiri": {
+    "rainfall": 3500,
+    "temperature": 26.5,
+    "N-ratio": 2,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Sangli": {
+    "rainfall": 750,
+    "temperature": 28,
+    "N-ratio": 1,
+    "P-ratio": 1.5,
+    "K-ratio": 1
+  },
+  "Satara": {
+    "rainfall": 625,
+    "temperature": 27.5,
+    "N-ratio": 1,
+    "P-ratio": 2,
+    "K-ratio": 1
+  },
+  "Sindhudurg": {
+    "rainfall": 4000,
+    "temperature": 26.5,
+    "N-ratio": 2,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Solapur": {
+    "rainfall": 600,
+    "temperature": 28.5,
+    "N-ratio": 1,
+    "P-ratio": 2,
+    "K-ratio": 1
+  },
+  "Thane": {
+    "rainfall": 2500,
+    "temperature": 27,
+    "N-ratio": 1,
+    "P-ratio": 1,
+    "K-ratio": 1
+  },
+  "Wardha": {
+    "rainfall": 900,
+    "temperature": 28,
+    "N-ratio": 1,
+    "P-ratio": 1.5,
+    "K-ratio": 1
+  },
+  "Washim": {
+    "rainfall": 700,
+    "temperature": 28.5,
+    "N-ratio": 1,
+    "P-ratio": 2,
+    "K-ratio": 1
+  },
+  "Yavatmal": {
+    "rainfall": 850,
+    "temperature": 28,
+    "N-ratio": 1,
+    "P-ratio": 1.5,
+    "K-ratio": 1
+  }
+}

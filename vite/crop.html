@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="./css/crop.scss">
+{% endblock %}
+{% block body %}
+<div class="layman-info">
+  <h2>The optimal crop for your field is...</h2>
+  <div class="crop-recommend-graph">loading...</div>
+  <h2>Data from your district:</h2>
+  <table>
+    <tr>
+      <td>District</td>
+      <td>
+        <span class="city"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>Average Humidity</td>
+      <td>
+        <span class="avg-humidity"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>Rainfall</td>
+      <td>
+        <span class="avg-rainfall"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>Temperature</td>
+      <td>
+        <span class="avg-temp"></span>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="graph-info">
+  <div class="graphs-container">
+    <div class="graphs">
+      <div class="graph-atom">
+        <canvas class="npk-chart"></canvas>
+      </div>
+      <div class="graph-atom">
+        <canvas class="ph-chart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="module" src="./src/crop.js"></script>
+{% endblock %}

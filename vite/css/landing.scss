@@ -1,0 +1,89 @@
+@use "./global.scss" as g;
+
+main {
+  width: calc(100vw - g.$sidebar-width) !important;
+  padding-left: 0px !important;
+}
+
+.hero {
+  height: calc(100vh - g.$navsize);
+
+  .content {
+    position: absolute;
+    width: calc(100vw - g.$sidebar-width) !important;
+    height: calc(100vh - g.$navsize);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #0005;
+    color: g.$shade;
+  }
+}
+
+.video {
+  position: absolute;
+  width: calc(100% - g.$sidebar-width);
+  height: calc(100vh - g.$navsize);
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
+
+.rest {
+  min-height: calc(35vh - g.$navsize - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 2rem;
+
+  background-size: cover;
+  background-position: center;
+
+  div,
+  h1,
+  h2,
+  span,
+  button {
+    max-width: 1080px;
+  }
+
+  strong {
+    color: g.$secondary;
+  }
+}
+
+// .rest-container {
+//   .rest:nth-child(1) {
+//     // TODO
+//     // background: url("/assets/farm1.jpeg");
+//   }
+// }
+
+button {
+  background: g.$shade;
+  color: g.$secondary;
+  font-size: 1.2rem;
+  padding: .5rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  transition: color 0.2s ease-in;
+  transition: background 0.2s ease-out;
+
+  &:hover {
+    background: g.$secondary;
+    color: g.$shade;
+  }
+}

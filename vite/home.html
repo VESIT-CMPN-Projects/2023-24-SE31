@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="./css/home.scss">
+{% endblock %}
+{% block body %}
+<div class="content">
+  <div class="left">
+    <h1 style="width:100%;align-items:start;">District Information.</h1>
+    <div class="info">
+      <div class="map">
+        <select name="map-select" id="map-select">
+          <!-- populated in JS -->
+        </select>
+        <div class="map-image"></div>
+      </div>
+      <div class="chart-container">
+        <h2>District's N:P:K Ratio</h2>
+        <canvas class="user-chart"></canvas>
+      </div>
+    </div>
+    <div class="more-info">
+      <span>
+        <h2 class="district-name"></h2>
+        <span class="district-rainfall"></span>
+        <strong>rainfall</strong>,
+        <span class="district-temperature"></span>
+        <strong>temperature</strong>.
+      </span>
+    </div>
+  </div>
+  <!-- <div class="right">
+    <div onclick="window.location.pathname='/ml/recommend'">
+      Recommend Crop
+    </div>
+    <div onclick="window.location.pathname='/ml/yield'">
+      Predict Yield
+    </div>
+    <div onclick="window.location.pathname='/ml/market'">
+      Forecast Prices
+    </div>
+  </div> -->
+</div>
+<script type="module" src="./src/home.js"></script>
+{% endblock %}

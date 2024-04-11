@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>District Selector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .dropdown-container {
+      position: relative;
+    }
+
+    .dropdown-input {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding-right: 30px; /* Space for arrow icon */
+      position: relative;
+    }
+
+    .arrow-icon {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      pointer-events: auto;
+      cursor: pointer;
+    }
+
+    .dropdown-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 300px;
+      max-height: 150px; /* Set the maximum height for the dropdown list */
+      overflow-y: auto; /* Add scrollbar when the list overflows */
+      border: 1px solid #ccc;
+      border-top: none;
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .dropdown-list-item {
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dropdown-list-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .selected {
+      background-color: #e6f7ff; /* Add a background color to indicate selection */
+    }
+
+    .watermark {
+      position: absolute;
+      pointer-events: none;
+      top: 15px;
+      left: 15px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<div class="dropdown-container">
+  <input type="text" class="dropdown-input" id="districtInput" placeholder=" ">
+  <div class="arrow-icon" onclick="toggleList()">&#9660;</div>
+  <div class="watermark">Select District</div>
+  <div class="dropdown-list" id="districtList">
+    <!-- Add district options here -->
+    <div class="dropdown-list-item" onclick="selectDistrict('Ahmednagar')">Ahmednagar</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Akola')">Akola</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Amravati')">Amravati</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Aurangabad')">Aurangabad</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Beed')">Beed</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Bhandara')">Bhandara</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Buldana')">Buldana</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Chandrapur')">Chandrapur</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Dhule')">Dhule</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Gadchiroli')">Gadchiroli</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Gondia')">Gondia</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Hingoli')">Hingoli</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Jalgaon')">Jalgaon</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Jalna')">Jalna</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Kolhapur')">Kolhapur</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Latur')">Latur</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Mumbai city')">Mumbai city</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Mumbai suburban')">Mumbai suburban</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Nagpur')">Nagpur</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Nanded')">Nanded</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Nandurbar')">Nandurbar</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Nashik')">Nashik</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Osamanabad')">Osamanabad</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Palghar')">Palghar</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Parbhani')">Parbhani</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Pune')">Pune</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Raigad')">Raigad</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Ratnagiri')">Ratnagiri</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Sangli')">Sangli</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Satara')">Satara</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Sindhudurg')">Sindhudurg</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Solapur')">Solapur</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Thane')">Thane</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Wardha')">Wardha</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Washim')">Washim</div>
+    <div class="dropdown-list-item" onclick="selectDistrict('Yavatmal')">Yavatmal</div>
+  </div>
+</div>
+
+<script>
+  const inputElement = document.getElementById('districtInput');
+  const listElement = document.getElementById('districtList');
+
+  function toggleList() {
+    listElement.style.display = listElement.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function selectDistrict(district) {
+    inputElement.value = district;
+    inputElement.classList.add('selected');
+    listElement.style.display = 'none';
+    document.querySelector('.watermark').style.display = 'none'; // Hide watermark when a district is selected
+    alert(`Selected District: ${district}`); // Show alert for the selected district
+  }
+
+  document.addEventListener('click', function (event) {
+    if (!event.target.classList.contains('dropdown-input') && !event.target.classList.contains('arrow-icon')) {
+      listElement.style.display = 'none';
+    }
+  });
+
+  inputElement.addEventListener('input', function () {
+    const filter = inputElement.value.toLowerCase();
+    const items = document.querySelectorAll('.dropdown-list-item');
+    items.forEach(item => {
+      const itemName = item.textContent.toLowerCase();
+      if (itemName.includes(filter)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    document.querySelector('.watermark').style.display = filter === '' ? 'block' : 'none'; // Hide watermark when typing
+  });
+</script>
+
+</body>
+</html>

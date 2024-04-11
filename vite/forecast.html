@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="./css/forecast.scss">
+{% endblock %}
+{% block body %}
+<div class="layman-info">
+  <h1>Best Market For Tomorrow</h1>
+  <h3 class="best-market">loading...</h3>
+  <h1>Predicted Market Prices For tomorrow!</h1>
+  <table class="market-prices">
+    <!-- list goes here -->
+  </table>
+</div>
+<div class="graph-info">
+  <div class="thumb">graphical data</div>
+  <div class="graphs-container">
+    <div class="graphs"></div>
+  </div>
+</div>
+<script type="module" src="./src/forecast.js"></script>
+{% endblock %}

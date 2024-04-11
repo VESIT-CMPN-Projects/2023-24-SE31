@@ -1,0 +1,98 @@
+@use "./global.scss" as g;
+
+main {
+  width: calc(100vw - 2rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    width: 100%;
+    max-width: 1280px;
+    height: calc(100vh - g.$navsize);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // margin: auto 1rem;
+    box-sizing: border-box;
+    // padding: 1rem;
+
+    .left,
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left {
+      // flex: 60%;
+
+      .map {
+        display: flex;
+        flex-direction: column;
+        flex: 60%;
+        background: transparent;
+        border-radius: 0.4rem;
+        margin: 0 4rem;
+
+        .map-image {
+          width: 560px;
+          height: 560px;
+          aspect-ratio: 1;
+          background-size: contain !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .chart-container {
+        flex: 40%;
+        justify-content: center;
+      }
+
+      .more-info {
+        width: 100%;
+        justify-content: left;
+      }
+
+    }
+
+    .right {
+      flex: 40%;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 1rem 0;
+
+        color: g.$secondary;
+        border: 2px solid g.$shade;
+        border-radius: 1rem;
+
+        &:hover {
+          background: mix(g.$background, black, 90%);
+        }
+
+        &.disabled {
+          background: #c0c0c0;
+
+          &:hover {
+            background: #999999;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@use "./global.scss" as g;
+
+main {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.graph-info {
+  flex: 0%;
+  position: relative;
+  width: 0px;
+}
+
+.layman-info {
+  flex: 100%;
+  padding: auto 0px;
+}
+
+.layman-info,
+.graph-info {
+  float: left;
+  transition: width 0.3s;
+  height: calc(100vh - g.$navsize - g.$footer-size);
+
+  transition: flex 0.2s ease-in-out;
+
+  // &.active {
+    flex: 50% !important;
+  // }
+}
+
+.thumb {
+  display: flex;
+  position: absolute;
+  right: 100%;
+  top: 20%;
+  text-orientation: sideways;
+  writing-mode: vertical-lr;
+  cursor: pointer;
+  background: white;
+  padding: 0.4rem;
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.graphs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-left: 2px solid g.$shade;
+  width: 100%;
+  height: calc(100vh - g.$navsize - g.$footer-size);
+  overflow: scroll;
+
+  .graphs {
+    width: 100%;
+    height: 100%;
+  }
+
+  .graph-atom {
+    width: 100%;
+
+    canvas {
+      width: 100% !important;
+      aspect-ratio: 1 !important;
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+  border: 1px solid g.$shade;
+
+  th,
+  td {
+    padding: 0.2rem;
+    border: 1px solid g.$shade;
+  }
+
+}
